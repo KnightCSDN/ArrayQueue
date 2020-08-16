@@ -1,19 +1,16 @@
 package LinkedList;
 
 public class Node {
+    private int id;
     private Object data;
     private Node next;
 
     public Node() {
     }
 
-    public Node(Object data) {
+    public Node(int id, Object data) {
+        this.id = id;
         this.data = data;
-    }
-
-    public Node(Object data, Node next) {
-        this.data = data;
-        this.next = next;
     }
 
     public Object getData() {
@@ -32,10 +29,19 @@ public class Node {
         this.next = next;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "LinkedList.Node{" +
-                "data=" + data +
+        return "Node{" +
+                "id=" + id +
+                ", data=" + data +
                 '}';
     }
 }
